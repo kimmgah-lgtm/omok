@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오목 게임</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>오목 게임</h1>
+            <div class="game-info">
+                <div class="current-player">
+                    현재 차례: <span id="current-player">흑돌</span>
+                </div>
+                <div class="game-status">
+                    상태: <span id="game-status">게임 진행 중</span>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="game-board-container">
+                <canvas id="game-board" width="600" height="600"></canvas>
+            </div>
+
+            <div class="game-controls">
+                <button id="new-game-btn">새 게임</button>
+                <button id="undo-btn">무르기</button>
+                <button id="reset-btn">초기화</button>
+            </div>
+        </main>
+
+        <aside class="game-history">
+            <h3>게임 기록</h3>
+            <div id="move-history"></div>
+        </aside>
+    </div>
+
+    <script src="js/gameLogic.js"></script>
+    <script src="js/uiController.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
